@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PrimeShine Auto Care | Checkout</title>
+  <!-- IA#2 Integration: external CSS + JS only -->
+  <link rel="stylesheet" href="../style.css" />
+  <script defer src="../script.js"></script>
+</head>
+<body class="page-checkout">
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a class="brand" href="index.html">
+          <img src="../Assets/logo.png" alt="PrimeShine Auto Care logo" />
+          <div>
+            <strong>PrimeShine Auto Care</strong><br />
+            <span>Drive clean. Stay glossy.</span>
+          </div>
+        </a>
+
+        <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="siteNav" aria-label="Toggle navigation">☰</button>
+      </div>
+
+      <nav class="site-nav" id="siteNav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="cart.html">Cart <span class="badge" id="cartCount">0</span></a>
+        <a href="login.html" data-auth="login">Login</a>
+        <a href="register.html" data-auth="login">Register</a>
+        <a href="about.html">About Us</a>
+        <button class="btn" type="button" data-auth="logout" hidden>Logout</button>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container auth-bar" id="authStatus" hidden>
+    <p class="help">Signed in as: <strong id="sessionUser">Guest</strong></p>
+  </div>
+
+  <main class="container page-main">
+    <div id="toast" class="card toast" hidden>Toast</div>
+
+    <section class="card page-banner">
+      <span class="kicker">Checkout summary</span>
+      <h1>Complete the order with a clean summary and simple shipping form.</h1>
+      <p>This page shows the final cart total and gives the user Confirm, Cancel, Clear All, and Close buttons as required.</p>
+    </section>
+
+    <section class="stack mt-lg">
+      <div id="checkoutSummary"></div>
+
+      <div class="card form">
+        <h2 class="section-title">Shipping details</h2>
+
+        <form id="checkoutForm" class="stack" novalidate>
+          <div class="row two">
+            <div class="stack">
+              <label for="coName">Full name</label>
+              <input id="coName" name="fullname" autocomplete="name" required />
+            </div>
+            <div class="stack">
+              <label for="coAmount">Amount being paid (JMD)</label>
+              <input id="coAmount" name="amount" type="number" min="1" step="1" required />
+            </div>
+          </div>
+
+          <div class="row two">
+            <div class="stack">
+              <label for="coAddress">Address</label>
+              <input id="coAddress" name="address" autocomplete="street-address" required />
+            </div>
+            <div class="stack">
+              <label for="coParish">Parish</label>
+              <select id="coParish" name="parish" required>
+                <option value="">Select...</option>
+                <option>Kingston</option>
+                <option>St. Andrew</option>
+                <option>St. Catherine</option>
+                <option>Clarendon</option>
+                <option>Manchester</option>
+                <option>St. Ann</option>
+                <option>St. James</option>
+                <option>Portland</option>
+                <option>St. Mary</option>
+                <option>Hanover</option>
+                <option>Trelawny</option>
+                <option>Westmoreland</option>
+                <option>St. Thomas</option>
+              </select>
+            </div>
+          </div>
+
+          <p id="checkoutMsg" class="help" aria-live="polite"></p>
+
+          <div class="cta-row">
+            <button class="btn primary" type="submit">Confirm</button>
+            <button class="btn" type="button" id="btnCancelCheckout">Cancel</button>
+            <button class="btn danger" type="button" id="btnClearCheckout">Clear All</button>
+            <button class="btn" type="button" id="btnCloseCheckout">Close</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-note">© 2026 PrimeShine Auto Care. Educational IA#2 project built with vanilla HTML, CSS, and JavaScript.</p>
+      <p class="footer-links"><a href="about.html">Contact</a> • <a href="products.html">Shop</a></p>
+    </div>
+  </footer>
+</body>
+</html>

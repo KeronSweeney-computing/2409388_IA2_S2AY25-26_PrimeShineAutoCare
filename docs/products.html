@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PrimeShine Auto Care | Products</title>
+  <!-- IA#2 Integration: external CSS + JS only -->
+  <link rel="stylesheet" href="../style.css" />
+  <script defer src="../script.js"></script>
+</head>
+<body class="page-products">
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a class="brand" href="index.html">
+          <img src="../Assets/logo.png" alt="PrimeShine Auto Care logo" />
+          <div>
+            <strong>PrimeShine Auto Care</strong><br />
+            <span>Drive clean. Stay glossy.</span>
+          </div>
+        </a>
+
+        <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="siteNav" aria-label="Toggle navigation">☰</button>
+      </div>
+
+      <nav class="site-nav" id="siteNav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="cart.html">Cart <span class="badge" id="cartCount">0</span></a>
+        <a href="login.html" data-auth="login">Login</a>
+        <a href="register.html" data-auth="login">Register</a>
+        <a href="about.html">About Us</a>
+        <button class="btn" type="button" data-auth="logout" hidden>Logout</button>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container auth-bar" id="authStatus" hidden>
+    <p class="help">Signed in as: <strong id="sessionUser">Guest</strong></p>
+  </div>
+
+  <main class="container page-main">
+    <div id="toast" class="card toast" hidden>Toast</div>
+
+    <section class="card page-banner">
+      <span class="kicker">PrimeShine collection</span>
+      <h1>Detailing essentials that look as premium as the finish they create.</h1>
+      <p>These cards display real product visuals, pricing, clean descriptions, and Add to Cart buttons connected to the cart page.</p>
+      <div class="pill-row">
+        <span class="pill">Soap</span>
+        <span class="pill">Microfiber Towels</span>
+        <span class="pill">Tire Shine</span>
+        <span class="pill">Air Fresheners</span>
+        <span class="pill">Polish</span>
+        <span class="pill">Finishing Spray</span>
+      </div>
+    </section>
+
+    <section class="stack mt-lg">
+      <div class="grid products-grid" id="productsGrid" aria-label="PrimeShine products grid"></div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-note">© 2026 PrimeShine Auto Care. Educational IA#2 project built with vanilla HTML, CSS, and JavaScript.</p>
+      <p class="footer-links"><a href="about.html">Contact</a> • <a href="products.html">Shop</a></p>
+    </div>
+  </footer>
+</body>
+</html>

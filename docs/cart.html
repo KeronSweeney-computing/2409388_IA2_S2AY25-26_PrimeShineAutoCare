@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PrimeShine Auto Care | Cart</title>
+  <!-- IA#2 Integration: external CSS + JS only -->
+  <link rel="stylesheet" href="../style.css" />
+  <script defer src="../script.js"></script>
+</head>
+<body class="page-cart">
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a class="brand" href="index.html">
+          <img src="../Assets/logo.png" alt="PrimeShine Auto Care logo" />
+          <div>
+            <strong>PrimeShine Auto Care</strong><br />
+            <span>Drive clean. Stay glossy.</span>
+          </div>
+        </a>
+
+        <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="siteNav" aria-label="Toggle navigation">☰</button>
+      </div>
+
+      <nav class="site-nav" id="siteNav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="cart.html">Cart <span class="badge" id="cartCount">0</span></a>
+        <a href="login.html" data-auth="login">Login</a>
+        <a href="register.html" data-auth="login">Register</a>
+        <a href="about.html">About Us</a>
+        <button class="btn" type="button" data-auth="logout" hidden>Logout</button>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container auth-bar" id="authStatus" hidden>
+    <p class="help">Signed in as: <strong id="sessionUser">Guest</strong></p>
+  </div>
+
+  <main class="container page-main">
+    <div id="toast" class="card toast" hidden>Toast</div>
+
+    <section class="card page-banner">
+      <span class="kicker">Shopping cart</span>
+      <h1>Review every item, update quantities, and see the full cost clearly.</h1>
+      <p>The cart page displays name, price, quantity, sub-total, discount, tax, and final total for a polished checkout experience.</p>
+    </section>
+
+    <section class="stack mt-lg">
+      <div id="cartEmpty" class="card info-panel" hidden>
+        <h2 class="section-title">Your cart is empty</h2>
+        <p class="help">Go to the Products page and add the detailing items you want to try.</p>
+      </div>
+
+      <div class="card table-wrap" id="cartTableWrap">
+        <table aria-label="Shopping cart table">
+          <thead>
+            <tr>
+              <th>Item</th>
+              <th>Qty</th>
+              <th>Sub-total</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="cartBody"></tbody>
+        </table>
+      </div>
+
+      <div class="card totals" id="cartTotals"></div>
+
+      <div class="cta-row">
+        <button class="btn danger" type="button" id="btnClearAll">Clear All</button>
+        <button class="btn primary" type="button" id="btnCheckout">Check Out</button>
+        <button class="btn" type="button" id="btnClose">Close</button>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-note">© 2026 PrimeShine Auto Care. Educational IA#2 project built with vanilla HTML, CSS, and JavaScript.</p>
+      <p class="footer-links"><a href="about.html">Contact</a> • <a href="products.html">Shop</a></p>
+    </div>
+  </footer>
+</body>
+</html>

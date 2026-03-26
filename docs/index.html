@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PrimeShine Auto Care | Home</title>
+  <!-- IA#2 Integration: external CSS + JS only -->
+  <link rel="stylesheet" href="../style.css" />
+  <script defer src="../script.js"></script>
+</head>
+<body class="page-home">
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a class="brand" href="index.html">
+          <img src="../Assets/logo.png" alt="PrimeShine Auto Care logo" />
+          <div>
+            <strong>PrimeShine Auto Care</strong><br />
+            <span>Drive clean. Stay glossy.</span>
+          </div>
+        </a>
+
+        <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="siteNav" aria-label="Toggle navigation">☰</button>
+      </div>
+
+      <nav class="site-nav" id="siteNav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="cart.html">Cart <span class="badge" id="cartCount">0</span></a>
+        <a href="login.html" data-auth="login">Login</a>
+        <a href="register.html" data-auth="login">Register</a>
+        <a href="about.html">About Us</a>
+        <button class="btn" type="button" data-auth="logout" hidden>Logout</button>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container auth-bar" id="authStatus" hidden>
+    <p class="help">Signed in as: <strong id="sessionUser">Guest</strong></p>
+  </div>
+
+  <main class="container page-main">
+    <div id="toast" class="card toast" hidden>Toast</div>
+
+    <section class="card hero" aria-label="PrimeShine hero section">
+      <div class="hero-copy">
+        <span class="kicker">For-profit car care e-commerce website</span>
+        <h1>Make every car look fresh, sharp, and showroom-ready.</h1>
+        <p>PrimeShine Auto Care is a premium detailing store built around the products drivers use most: car wash soap, microfiber towels, tire shine, air fresheners, polish, and finishing spray.</p>
+
+        <div class="cta-row">
+          <a class="btn primary" href="products.html">Shop products</a>
+          <a class="btn accent" href="cart.html">View cart</a>
+          <a class="btn" href="about.html">About the brand</a>
+        </div>
+
+        <div class="hero-points">
+          <span>✓ Real product images across the website</span>
+          <span>✓ Premium automotive look with a bold car-wash hero</span>
+          <span>✓ Cart totals, checkout summary, and clean product browsing</span>
+        </div>
+      </div>
+
+      <div class="hero-side">
+        <div class="glass quick-panel">
+          <h2>What we sell</h2>
+          <ul>
+            <li><strong>Wash</strong>-foam-rich car wash soap</li>
+            <li><strong>Finish</strong>-microfiber towels, spray, and polish</li>
+            <li><strong>Protect</strong>-tire shine for a deep-black look</li>
+            <li><strong>Freshen</strong>-interior air fresheners</li>
+          </ul>
+        </div>
+        <div class="hero-cards">
+          <div class="glass mini-stat">
+            <strong>6</strong>
+            <span>detailing essentials on the product range</span>
+          </div>
+          <div class="glass mini-stat">
+            <strong>10%</strong>
+            <span>discount unlocked on bigger orders</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid feature-strip mt-lg" aria-label="Brand highlights">
+      <article class="card feature">
+        <strong>Premium visual style</strong>
+        <p>A polished dark theme with a car-wash hero image, glass panels, and strong contrast for a high-end automotive feel.</p>
+      </article>
+      <article class="card feature">
+        <strong>Focused business idea</strong>
+        <p>This is a dedicated car care and detailing store, not a general auto-parts site, so the brand feels clearer and more unique.</p>
+      </article>
+      <article class="card feature">
+        <strong>Smooth customer flow</strong>
+        <p>Browse the products, add items, review cart totals, and complete a clean demo checkout experience.</p>
+      </article>
+    </section>
+
+    <section class="mt-lg">
+      <div class="card card-flat">
+        <h2 class="section-title">Featured best-sellers</h2>
+        <p class="help">The most eye-catching products for a clean finish, a brighter shine, and a fresher cabin.</p>
+      </div>
+      <div class="grid products-grid mt-lg" id="featuredGrid" aria-label="Featured products grid"></div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-note">© 2026 PrimeShine Auto Care. Educational IA#2 project built with vanilla HTML, CSS, and JavaScript.</p>
+      <p class="footer-links"><a href="about.html">Contact</a> • <a href="products.html">Shop</a></p>
+    </div>
+  </footer>
+</body>
+</html>
+
+<h2>Links</h2>
+
+<ul>
+  <li>
+    <strong>GitHub Repository:</strong>
+    <a href="https://github.com/KeronSweeney-Computing/2409388_IA2_S2AY25-26_PrimeShineAutoCare" target="_blank">
+      View My GitHub Repository
+    </a>
+  </li>
+
+  <li>
+    <strong>Free Hosting Link:</strong>
+    <a href="https://keronsweeney-computing.github.io/2409388_IA2_S2AY25-26_PrimeShineAutoCare/" target="_blank">
+      View My Live Website
+    </a>
+  </li>
+</ul>

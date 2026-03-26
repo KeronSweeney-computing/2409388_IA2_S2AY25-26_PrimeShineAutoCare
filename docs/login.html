@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PrimeShine Auto Care | Login</title>
+  <!-- IA#2 Integration: external CSS + JS only -->
+  <link rel="stylesheet" href="../style.css" />
+  <script defer src="../script.js"></script>
+</head>
+<body class="page-login">
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a class="brand" href="index.html">
+          <img src="../Assets/logo.png" alt="PrimeShine Auto Care logo" />
+          <div>
+            <strong>PrimeShine Auto Care</strong><br />
+            <span>Drive clean. Stay glossy.</span>
+          </div>
+        </a>
+
+        <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="siteNav" aria-label="Toggle navigation">☰</button>
+      </div>
+
+      <nav class="site-nav" id="siteNav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="cart.html">Cart <span class="badge" id="cartCount">0</span></a>
+        <a href="login.html" data-auth="login">Login</a>
+        <a href="register.html" data-auth="login">Register</a>
+        <a href="about.html">About Us</a>
+        <button class="btn" type="button" data-auth="logout" hidden>Logout</button>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container auth-bar" id="authStatus" hidden>
+    <p class="help">Signed in as: <strong id="sessionUser">Guest</strong></p>
+  </div>
+
+  <main class="container page-main">
+    <div id="toast" class="card toast" hidden>Toast</div>
+
+    <section class="grid auth-layout">
+      <div class="card form">
+        <span class="kicker">Account access</span>
+        <h1 class="section-title">Login</h1>
+        <p class="help">Sign in to continue your PrimeShine shopping experience.</p>
+
+        <form id="loginForm" class="stack" novalidate>
+          <div class="row">
+            <div class="stack">
+              <label for="loginUsername">Username</label>
+              <input id="loginUsername" name="username" autocomplete="username" required />
+            </div>
+            <div class="stack">
+              <label for="loginPassword">Password</label>
+              <input id="loginPassword" name="password" type="password" autocomplete="current-password" required />
+            </div>
+          </div>
+
+          <p id="loginMsg" class="help" aria-live="polite"></p>
+
+          <div class="cta-row">
+            <button class="btn primary" type="submit">Log In</button>
+            <a class="btn" href="register.html">Create account</a>
+          </div>
+        </form>
+      </div>
+
+      <aside class="card promo-panel">
+        <span class="kicker">PrimeShine promise</span>
+        <h2>Detailing products presented with a premium automotive look.</h2>
+        <p>Strong visuals, sharp contrast, clean spacing, and a realistic car-wash theme help this project stand out during presentation.</p>
+        <ul>
+          <li>Real product photos</li>
+          <li>Responsive layout for desktop and mobile</li>
+        </ul>
+      </aside>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-note">© 2026 PrimeShine Auto Care. Educational IA#2 project built with vanilla HTML, CSS, and JavaScript.</p>
+      <p class="footer-links"><a href="about.html">Contact</a> • <a href="products.html">Shop</a></p>
+    </div>
+  </footer>
+</body>
+</html>

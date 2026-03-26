@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PrimeShine Auto Care | About Us</title>
+  <!-- IA#2 Integration: external CSS + JS only -->
+  <link rel="stylesheet" href="../style.css" />
+  <script defer src="../script.js"></script>
+</head>
+<body class="page-about">
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a class="brand" href="index.html">
+          <img src="../Assets/logo.png" alt="PrimeShine Auto Care logo" />
+          <div>
+            <strong>PrimeShine Auto Care</strong><br />
+            <span>Drive clean. Stay glossy.</span>
+          </div>
+        </a>
+
+        <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="siteNav" aria-label="Toggle navigation">☰</button>
+      </div>
+
+      <nav class="site-nav" id="siteNav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="cart.html">Cart <span class="badge" id="cartCount">0</span></a>
+        <a href="login.html" data-auth="login">Login</a>
+        <a href="register.html" data-auth="login">Register</a>
+        <a href="about.html">About Us</a>
+        <button class="btn" type="button" data-auth="logout" hidden>Logout</button>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container auth-bar" id="authStatus" hidden>
+    <p class="help">Signed in as: <strong id="sessionUser">Guest</strong></p>
+  </div>
+
+  <main class="container page-main">
+    <div id="toast" class="card toast" hidden>Toast</div>
+
+    <section class="card page-banner">
+      <span class="kicker">About the brand</span>
+      <h1>PrimeShine Auto Care was built to look premium, focused, and easy to trust.</h1>
+      <p>A strong niche, a premium car-care look, and a clean page structure help the site feel much more polished than a generic template.</p>
+    </section>
+
+    <section class="stack mt-lg">
+      <div class="card form">
+        <h2 class="section-title">Student details</h2>
+                
+         <div class="info-list">
+          <span><strong>Student:</strong> [Keron Sweeney]</span>
+          <span><strong>ID#:</strong> [2409388]</span>
+          <span><strong>Module:</strong> CIT2011 - Web Programming</span>
+          <span><strong>Assignment:</strong> Individual Assignment #2</span>
+         
+        </div>
+      </div>
+
+      <div class="grid stats" aria-label="Brand summary">
+        <article class="card stat">
+          <strong>Mission</strong>
+          <span>To make premium-looking car care easy to shop online with clear product choices, polished visuals, and a smooth customer experience.</span>
+        </article>
+        <article class="card stat">
+          <strong>Vision</strong>
+          <span>To become a recognised online detailing brand known for style, shine, and dependable presentation.</span>
+        </article>
+        <article class="card stat">
+          <strong>Slogan</strong>
+          <span>Drive clean. Stay glossy.</span>
+        </article>
+      </div>
+
+      <div class="card info-panel">
+        <h2 class="section-title">Business description</h2>
+        <p>PrimeShine Auto Care is a for-profit online retailer with a focus on cleaning and car care supplies. The company was established to cater to drivers and automobile owners who place a high value on upkeep, cleanliness, and the general appearance of their vehicles. Car wash soap, microfiber towels, tire shine, air fresheners, polish, and detailing spray are just a few of the important detailing products in our line.
+
+The company's goal is to give consumers an easy-to-use online method of obtaining essential auto care goods. These products are gathered in one location by PrimeShine Auto Care, giving customers a clear view of product details and a well-organized buying experience. The website presents the company in a polished and appealing manner while being simple to use.</p>
+        <p>Our business Target customers include private car owners, taxi operators, ride-share drivers, detailing enthusiasts, and anyone who values a fresh, well-presented car.</p>
+        <p>Questions or comments? <a href="mailto:[yourid]@utech.edu.jm?subject=PrimeShine%20Auto%20Care%20Inquiry">Send us an email</a>.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-note">© 2026 PrimeShine Auto Care. Educational IA#2 project built with vanilla HTML, CSS, and JavaScript.</p>
+      <p class="footer-links"><a href="about.html">Contact</a> • <a href="products.html">Shop</a></p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PrimeShine Auto Care | Register</title>
+  <!-- IA#2 Integration: external CSS + JS only -->
+  <link rel="stylesheet" href="../style.css" />
+  <script defer src="../script.js"></script>
+</head>
+<body class="page-register">
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a class="brand" href="index.html">
+          <img src="../Assets/logo.png" alt="PrimeShine Auto Care logo" />
+          <div>
+            <strong>PrimeShine Auto Care</strong><br />
+            <span>Drive clean. Stay glossy.</span>
+          </div>
+        </a>
+
+        <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="siteNav" aria-label="Toggle navigation">☰</button>
+      </div>
+
+      <nav class="site-nav" id="siteNav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="cart.html">Cart <span class="badge" id="cartCount">0</span></a>
+        <a href="login.html" data-auth="login">Login</a>
+        <a href="register.html" data-auth="login">Register</a>
+        <a href="about.html">About Us</a>
+        <button class="btn" type="button" data-auth="logout" hidden>Logout</button>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container auth-bar" id="authStatus" hidden>
+    <p class="help">Signed in as: <strong id="sessionUser">Guest</strong></p>
+  </div>
+
+  <main class="container page-main">
+    <div id="toast" class="card toast" hidden>Toast</div>
+
+    <section class="grid auth-layout">
+      <div class="card form">
+        <span class="kicker">Create demo account</span>
+        <h1 class="section-title">Registration</h1>
+        <p class="help">Register with your details to test the login workflow and polished form layout.</p>
+
+        <form id="registerForm" class="stack" novalidate>
+          <div class="row two">
+            <div class="stack">
+              <label for="regFullname">Full name</label>
+              <input id="regFullname" name="fullname" autocomplete="name" required />
+            </div>
+            <div class="stack">
+              <label for="regDob">Date of birth</label>
+              <input id="regDob" name="dob" type="date" required />
+            </div>
+          </div>
+
+          <div class="row two">
+            <div class="stack">
+              <label for="regEmail">Email</label>
+              <input id="regEmail" name="email" type="email" autocomplete="email" required />
+            </div>
+            <div class="stack">
+              <label for="regUsername">Username</label>
+              <input id="regUsername" name="username" autocomplete="username" required />
+            </div>
+          </div>
+
+          <div class="row two">
+            <div class="stack">
+              <label for="regPassword">Password</label>
+              <input id="regPassword" name="password" type="password" autocomplete="new-password" required />
+              <span class="field-note">Use at least 8 characters and include a number.</span>
+            </div>
+            <div class="stack">
+              <label for="regConfirm">Confirm password</label>
+              <input id="regConfirm" name="confirm" type="password" autocomplete="new-password" required />
+            </div>
+          </div>
+
+          <p id="registerMsg" class="help" aria-live="polite"></p>
+
+          <div class="cta-row">
+            <button class="btn primary" type="submit">Create Account</button>
+            <a class="btn" href="login.html">Already registered?</a>
+          </div>
+        </form>
+      </div>
+
+      <aside class="card promo-panel">
+        <span class="kicker">Why the brand works</span>
+        <h2>PrimeShine combines a strong niche with a clean premium presentation.</h2>
+        <p>The site design matches the business idea: deep dark colours, bright highlights, glossy car imagery, and focused detailing products.</p>
+        <ul>
+          <li>Unique car care niche</li>
+          <li>Consistent theme and colour palette</li>
+          <li>Professional e-commerce look</li>
+        </ul>
+      </aside>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-note">© 2026 PrimeShine Auto Care. Educational IA#2 project built with vanilla HTML, CSS, and JavaScript.</p>
+      <p class="footer-links"><a href="about.html">Contact</a> • <a href="products.html">Shop</a></p>
+    </div>
+  </footer>
+</body>
+</html>
