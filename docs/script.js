@@ -1,20 +1,16 @@
 
-/* =========================================================
-   Web Programming (CIT2011) — Individual Assignment #2 (IA#2)
-   Project: PrimeShine Auto Care
-   External JavaScript only. Includes button-name alerts per lecturer.
-   ========================================================= */
+
 
 const IA2 = (() => {
   "use strict";
 
-  // IA#2 JS: products data rendered with DOM manipulation
+  
   const PRODUCTS = [
     {
       id: "p1",
       name: "GlossWash Car Wash Soap",
       price: 4200,
-      img: "../Assets/car-wash-soap.jpg",
+      img: "Assets/car-wash-soap.jpg",
       desc: "High-foam wash soap for lifting road film, dust, and grime while leaving paint looking clean and bright.",
       tag1: "Exterior wash",
       tag2: "Foam rich"
@@ -23,7 +19,7 @@ const IA2 = (() => {
       id: "p2",
       name: "UltraPlush Microfiber Towels",
       price: 3600,
-      img: "../Assets/microfiber-towels.jpg",
+      img: "Assets/microfiber-towels.jpg",
       desc: "Soft scratch-safe towels for drying, buffing, wiping trim, and finishing glossy surfaces after a detail.",
       tag1: "Lint-free",
       tag2: "Detail safe"
@@ -32,7 +28,7 @@ const IA2 = (() => {
       id: "p3",
       name: "WetLook Tire Shine",
       price: 2900,
-      img: "../Assets/tire-shine.jpg",
+      img: "Assets/tire-shine.jpg",
       desc: "A clean deep-black finish for tires with an easy-to-apply shine that makes wheels look freshly detailed.",
       tag1: "Wheel care",
       tag2: "Gloss finish"
@@ -41,7 +37,7 @@ const IA2 = (() => {
       id: "p4",
       name: "Royal Pine Air Freshener",
       price: 1800,
-      img: "../Assets/air-freshener.jpg",
+      img: "Assets/air-freshener.jpg",
       desc: "Simple interior freshness for drivers who want the cabin to feel cleaner and more inviting every day.",
       tag1: "Interior care",
       tag2: "Fresh scent"
@@ -50,7 +46,7 @@ const IA2 = (() => {
       id: "p5",
       name: "MirrorGloss Car Polish",
       price: 5100,
-      img: "../Assets/polish.jpg",
+      img: "Assets/polish.jpg",
       desc: "Restores depth and shine with a polished finish that helps the bodywork look sharp and presentation-ready.",
       tag1: "Paint care",
       tag2: "High shine"
@@ -59,7 +55,7 @@ const IA2 = (() => {
       id: "p6",
       name: "QuickDetail Finishing Spray",
       price: 3400,
-      img: "../Assets/spray.jpg",
+      img: "Assets/spray.jpg",
       desc: "Final-step spray that refreshes gloss, removes light dust, and helps the vehicle leave with a crisp finish.",
       tag1: "Fast finish",
       tag2: "Detail spray"
@@ -94,12 +90,12 @@ const IA2 = (() => {
     }
   };
 
-  // Lecturer requirement: alert() showing button name
+
   function alertButtonName(label) {
     window.alert(label);
   }
 
-  // ---------------- Cart state ----------------
+
   const CART_KEY = "ia2_primeshine_cart";
   function loadCart() { return storage.get(CART_KEY, []); }
   function saveCart(items) { storage.set(CART_KEY, items); updateCartBadge(); }
@@ -137,7 +133,7 @@ const IA2 = (() => {
     }).filter(Boolean);
   }
 
-  // IA#2 JS: arithmetic + control structures
+
   function calcTotals(lines) {
     const subtotal = lines.reduce((sum, line) => sum + (line.price * line.qty), 0);
     let discountRate = 0;
@@ -156,13 +152,13 @@ const IA2 = (() => {
     return { subtotal, discount, tax, total, discountRate, taxRate };
   }
 
-  // ---------------- Navigation ----------------
+
   function initNav() {
     const btn = qs("#navToggle");
     const nav = qs("#siteNav");
     if (!btn || !nav) return;
 
-    // IA#2 JS: event listener #1
+ 
     btn.addEventListener("click", () => {
       alertButtonName("Menu Button");
       const open = nav.classList.toggle("is-open");
@@ -184,7 +180,6 @@ const IA2 = (() => {
     if (el) el.textContent = String(cartCount());
   }
 
-  // ---------------- Toast ----------------
   let toastTimer = null;
   function showToast(text) {
     const el = qs("#toast");
@@ -195,7 +190,7 @@ const IA2 = (() => {
     toastTimer = window.setTimeout(() => { el.hidden = true; }, 1700);
   }
 
-  // ---------------- Products ----------------
+
   function escapeHtml(str) {
     return String(str)
       .replaceAll("&", "&amp;")
@@ -238,7 +233,6 @@ const IA2 = (() => {
     });
   }
 
-  // ---------------- Cart page ----------------
   function renderCartPage() {
     const tableBody = qs("#cartBody");
     const emptyState = qs("#cartEmpty");
@@ -326,7 +320,7 @@ const IA2 = (() => {
     });
   }
 
-  // ---------------- Checkout ----------------
+
   function renderCheckoutSummary() {
     const host = qs("#checkoutSummary");
     if (!host) return;
@@ -436,7 +430,7 @@ const IA2 = (() => {
     });
   }
 
-  // ---------------- Login/Register ----------------
+
   const USERS_KEY = "ia2_primeshine_users";
   const SESSION_KEY = "ia2_primeshine_session";
 
